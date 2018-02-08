@@ -1,8 +1,8 @@
 # RN中项目调试技巧
-> cmd + d调出开发者菜单(ios)
-> cmd/ctrl + m调出开发者菜单(android)
-> cmd + r快速刷新当前页面(ios)
-> 双击r键快速刷新当前页面(android)
+> * cmd + d调出开发者菜单(ios)
+> * cmd/ctrl + m调出开发者菜单(android)
+> * cmd + r快速刷新当前页面(ios)
+> * 双击r键快速刷新当前页面(android)
 
 ### 1、Reload
 > 重新加载JS代码
