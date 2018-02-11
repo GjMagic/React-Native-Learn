@@ -3,7 +3,6 @@
  * https://github.com/facebook/react-native
  * @flow
  */
-
 import React, { Component } from 'react';
 import {
   Platform,
@@ -16,9 +15,15 @@ type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
-      <View style={[style.container, style.other]}>
+      <View style={[style.container]}>
         <View style={style.subBox}>
-          <Text style={style.text}>adasd</Text>
+          <Text style={style.text}>subBox1</Text>
+        </View>
+        <View style={style.subBox}>
+          <Text style={style.text}>subBox2</Text>
+        </View>
+        <View style={style.subBox}>
+          <Text style={style.text}>subBox3</Text>
         </View>
       </View>
     );
@@ -27,33 +32,23 @@ export default class App extends Component<Props> {
 
 const style = StyleSheet.create({
   container: { 
-    width: 200, 
-    height: 200, 
-    backgroundColor: 'green',
-    borderRadius: 10,
-    marginHorizontal: 30,
-    marginVertical: 30,
-    padding: 30,
-    borderWidth: 3,
-    borderColor: 'red',
-    borderStyle: 'solid',
-    /* 以下只支持ios */
-    shadowColor: 'red',
-    shadowOffset: { width: 10, height: 10 },
-    shadowOpacity: .35,
-    shadowRadius: 14,
-    elevation: 300  /* 只支持android 5.0以上 */
-  },
-  other: {
-    marginLeft: 20,
-    backgroundColor: '#00ff66'
+    display: 'flex',
+    backgroundColor: 'skyblue',
+    height: 500,
+    flexDirection: 'column', // 子元素排列方式
+    //justifyContent: 'flex-end'
+    justifyContent: 'center', // 主轴对齐方式
+    flexWrap: 'wrap', // 是否换行显示，默认nowrap
+    alignItems: 'center', // 控制是否撑满父级，和侧轴对齐方式
+    flex: 1 // 定义元素所占区域的比重
   },
   subBox: {
+    backgroundColor: 'red',
     height: 50,
-    backgroundColor: 'red'
+    alignSelf: 'center', // 控制单个子元素侧轴对齐方式
+    flex: 1
   },
   text: {
-    color: '#fff',
-    fontWeight: '500'
+    
   }
 })
