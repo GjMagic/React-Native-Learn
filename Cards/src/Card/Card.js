@@ -16,11 +16,14 @@ import {
 type Props = {};
 export default class App extends Component<Props> {
   render() {
+
+    let { source, content, time } = this.props;
+
     return (
       <View style={styles.container}>
         <View style={styles.avatarWrap}>
           <Image 
-            source={require('./images/avatar.png')}
+            source={source}
             style={styles.avatar}
           />
         </View>
@@ -30,10 +33,9 @@ export default class App extends Component<Props> {
             numberOfLines={3}
             ellipsizeMode='tail' // 已省略号显示
           >
-            TouchableWithoutFeedback一个Touchable系列组件中最基本的一个组价，
-            只响应用户的点击事件不会做任何UI上的改变，在使用的过程中需要特别留意。
+            {content}
           </Text>
-          <Text style={styles.time}>11: 42</Text>
+          <Text style={styles.time}>{time}</Text>
         </View>
       </View>
     );
