@@ -9,3 +9,9 @@
 
 ### 2、PracticeApp
 > 里面记录了对RN样式、布局、组件等的练习。
+
+### 3、Cards
+> ScrollView、FlatList、跨平台开发方案
+
+### 4、RN打包命令
+> RN打包命令总结(本地包、离线包)
