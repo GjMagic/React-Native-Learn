@@ -15,3 +15,6 @@
 
 ### 4、RN打包命令
 > RN打包命令总结(本地包、离线包)
+
+### 5、CameraDemo
+> 基于react-native的相机组件研究（react-native-camera）
