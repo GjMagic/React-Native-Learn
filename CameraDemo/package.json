@@ -4,11 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "ios": "react-native bundle --entry-file ./index.js --bundle-output ./ios/bundle/index.ios.jsbundle --platform ios --assets-dest ./ios/bundle --dev false",
+    "android": "react-native bundle --entry-file index.js --platform android --dev false --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/assets/src/images/"
   },
   "dependencies": {
     "react": "^16.3.0-alpha.1",
-    "react-native": "0.54.4"
+    "react-native": "0.54.4",
+    "react-native-camera": "^1.0.3"
   },
   "devDependencies": {
     "babel-jest": "22.4.3",
